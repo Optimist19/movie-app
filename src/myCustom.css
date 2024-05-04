@@ -44,3 +44,14 @@
   width: 100% !important;
 }
 
+.rfm-child{
+  margin: 0 1vw;
+}
+
+
+
+@media screen and (max-width: 900px){
+  .css-dip3t8 {
+    width: 8vw;
+  }
+}

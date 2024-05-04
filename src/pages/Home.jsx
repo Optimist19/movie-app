@@ -8,7 +8,7 @@ import SearchResult from "@/components/SearchResult";
 function Home() {
   const { searchInput } = useSelector((state) => state.search);
 
-  console.log(searchInput);
+  // console.log(searchInput);
 
   return (
     <section className="w-[100%]">

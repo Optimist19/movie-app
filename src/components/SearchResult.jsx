@@ -8,8 +8,8 @@ import Loading from "./Loading";
 function SearchResult() {
   const { pending, results } = useSelector((state) => state.search);
 
-  console.log(pending, "pending");
-  console.log(results, "results");
+  // console.log(pending, "pending");
+  // console.log(results, "results");
 
 
   if(pending === "loading"){
@@ -17,15 +17,15 @@ function SearchResult() {
   }
 
   return (
-    <section className="">
+    <section className="flex flex-col items-center">
 		<h2 className="text-2xl py-3">Your searched results</h2>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid  sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 lg:gap-3">
         {Array.isArray(results) &&
           results.map((result) => {
             return (
               <div key={result.id}>
                 <Link to={`/movie/${result.id}`}>
-                  <Card className="relative w-[20vw] mx-2 h-[25vh]"  style={{
+                  <Card  className="relative w-[80vw] sm:w-[40vw] md:w-[30vw] mx-2 my-2 h-[25vh] lg:w-[20vw]" style={{
                     backgroundImage: `url(
                       'https://image.tmdb.org/t/p/w500${result.poster_path}'
                     )`

@@ -29,7 +29,7 @@ export const searchSlice = createSlice({
 
 
 export const searchText = createAsyncThunk("musicSearch/searchText", async (string) =>{
-  console.log(string, "string")
+  // console.log(string, "string")
     try {
 
       const options = {
@@ -47,11 +47,11 @@ export const searchText = createAsyncThunk("musicSearch/searchText", async (stri
       );
       const res = await response.json();
       const data = res.results
-      console.log(data)
+      // console.log(data)
       
       return data
     } catch (err) {
-      console.error("Error fetching movies:", err);
+      // console.error("Error fetching movies:", err);
       return err;
     }
 })

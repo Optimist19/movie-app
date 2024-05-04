@@ -22,21 +22,21 @@ function Movies({ trendingmovie, recommendedmovie, fromRecommended }) {
 
   const a = useSelector(store => store.bookmark)
 
-console.log(a)
+// console.log(a)
 
 
   function addM(result){
   dispatch(addMovie(result))
   }
 
-  
+
   // What I did here is to make sure that code in the conditional statement shows in the expected component(RecommendedMovies). You can see that the code in the conditional statement is similar to the real component return. So, I made this selective due to the props I passed here from the parent component(RecommendedMovies). The first return goes to RecomendedMovies while the second goes to TrendingMovies
 
   //   console.log(movie, "movie")
   if (fromRecommended === "fromRecommended") {
     return (
       <section >
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid  sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 ">
           {Array.isArray(recommendedmovie) &&
             recommendedmovie.map((result) => {
               return (
@@ -44,7 +44,7 @@ console.log(a)
                   key={result.id}
 >
                   <Link to={`/movie/${result.id}`}>
-                    <Card className="relative w-[20vw] mx-2 h-[25vh]" style={{
+                    <Card className="relative w-[80vw] sm:w-[40vw] md:w-[30vw] mx-2 my-2 h-[25vh] lg:w-[20vw]"  style={{
                     backgroundImage: `url(
                       'https://image.tmdb.org/t/p/w500${result.poster_path}'
                     )`
@@ -83,14 +83,12 @@ console.log(a)
             trendingmovie.map((result) => {
               {
                 /* {movie?.map((result) => { */
-              }
-              {
                 /* This works too */
               }
               return (
-                <div key={result.id} className="display:">
+                <div key={result.id} className="">
                   <Link to={"/movie/" + result.id}>
-                    <Card className="relative w-[20vw]  h-[25vh]"  style={{
+                    <Card className="relative w-[80vw] sm:w-[40vw] md:w-[30vw] mx-2 my-2 h-[25vh]"  style={{
                     backgroundImage: `url(
                       'https://image.tmdb.org/t/p/w500${result.poster_path}'
                     )`

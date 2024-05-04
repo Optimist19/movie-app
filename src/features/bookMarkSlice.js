@@ -10,7 +10,7 @@ export const bookMarkSlice = createSlice({
 	initialState,
 	reducers: {
 		addMovie:(state, action)=>{
-			console.log(action)
+			// console.log(action)
 
 			// const id = action.payload.map()
 			// const selectedMovie = state.bookMarkArr.find(bookmark => bookmark.id === action.payload.id)
