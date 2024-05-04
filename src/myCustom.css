@@ -1,0 +1,46 @@
+
+*{
+  /* padding: 0 ;
+  margin: 0 ;
+  box-sizing: border-box ; */
+}
+
+.sidebar-height{
+  height: 100vh !important;
+  overflow-x: hidden;
+}
+
+.css-dip3t8 {
+  width: 5vw;
+    position: fixed !important;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 3;
+    background-color: rgb(249, 249, 249, 0.7);
+}
+
+/* .css-1wvake5 {
+    position: relative;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-color: #efefef;
+    -webkit-transition: width, left, right, 300ms;
+    transition: width, left, right, 300ms;
+    min-width: 4% !important;
+} */
+
+
+
+
+.css-vj11vy{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.ytp-cued-thumbnail-overlay-image{
+  width: 100% !important;
+}
+
