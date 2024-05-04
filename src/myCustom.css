@@ -48,10 +48,17 @@
   margin: 0 1vw;
 }
 
+button{
+  position: fixed;
+  top: 6vh;
+  right: 3vw;
+  color: rgb(244 63 94);
+}
+
 
 
 @media screen and (max-width: 900px){
   .css-dip3t8 {
-    width: 8vw;
+    width: 15vw;
   }
 }

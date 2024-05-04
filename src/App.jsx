@@ -7,15 +7,13 @@ import MovieDetails, {
 
 import LayOutPage from "./pages/LayOutPage";
 
-import {
-  QueryClient,
-  QueryClientProvider
-} from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import ErrorBoundary from "./components/ErrorBoundary";
 import TVPage from "./pages/TVPage";
 import BookMakePage from "./pages/BookMakePage";
-
+import { ThemeProvider } from "@/components/theme-provider";
+import { ModeToggle } from "./components/mode-toggle";
 
 function App() {
   const router = createBrowserRouter([
@@ -46,7 +44,6 @@ function App() {
           element: <BookMakePage />,
           errorElement: <ErrorBoundary />
         }
-
       ]
     }
   ]);
@@ -56,8 +53,10 @@ function App() {
     <>
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} />
-
-        <RouterProvider router={router} />
+        <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+          <RouterProvider router={router} />
+          <ModeToggle />
+        </ThemeProvider>
       </QueryClientProvider>
     </>
   );

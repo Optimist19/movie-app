@@ -22,7 +22,7 @@ export default function LayOutPage() {
     <section>
       <div className="sidebar-height">
         <div
-          className="fixed right-9 text-4xl text-rose-500 cursor-pointer z-10"
+          className="fixed right-5 top-2 text-4xl text-rose-500 cursor-pointer z-10"
           onClick={toggleFtn}>
           {toggle ? <PiToggleRightFill /> : <PiToggleLeftFill />}
         </div>

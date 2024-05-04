@@ -80,8 +80,8 @@ function MovieDetails() {
             </div>
 
             <div className=" text-slate-400">
-              <div className="flex gap-3 justify-evenly py-5">
-                <div>
+              <div className="px-4 sm:py-5 md:flex md:justify-evenly">
+                <div className="py-4">
                   <h1 className="text-4xl">GENRE</h1>
                   {data.genres.map((genre) => {
                     return (
@@ -101,17 +101,17 @@ function MovieDetails() {
                   <div onClick={videoTriller}><FaCirclePlay className="text-4xl cursor-pointer pt-1"/></div>
                 </div>
 
-                <div className="">
+                <div className="py-4">
                   <div className="text-4xl">
                     <p>{data.title}</p>
                   </div>
                   <div className="text-xl my-1">
                     <p>{playTime}hr(s)</p>
                   </div>
-                  <div className="text-xl my-1 w-[30vw]">
+                  <div className="md:text-xl my-1 md:w-[30vw]">
                     <p>{data.overview}</p>
                   </div>
-                  <div className="flex items-center">
+                  <div className="flex items-center py-3">
                     {rating.map((a, i) => {
                       return (
                         <FaRegStar key={i} className="text-2xl text-blue-600" />
@@ -120,8 +120,8 @@ function MovieDetails() {
                   </div>
                 </div>
 
-                <div className="flex justify-center">
-                  <div className="w-[10vw]">
+                <div className="">
+                  <div className="sm:w-[100%] md:w-[10vw]">
                     <img
                       className="w-[100%]"
                       src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
