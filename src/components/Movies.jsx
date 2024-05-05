@@ -50,7 +50,7 @@ function Movies({ trendingmovie, recommendedmovie, fromRecommended }) {
                     )`
                   }}>
                       <CardHeader>
-                        <CardTitle className="w-[15vw] text-xs bg-slate-300 px-2 py-1 rounded-sm">
+                        <CardTitle className=" text-xs bg-slate-300 px-2 py-1 rounded-sm">
                           {result.title}
                         </CardTitle>
                       </CardHeader>
@@ -76,7 +76,7 @@ function Movies({ trendingmovie, recommendedmovie, fromRecommended }) {
   }
   return (
     <section className="w-full">
-      <h1 className="text-2xl py-3 pl-3">Trending now</h1>
+      <h1 className="text-xl py-6 pl-3 sm:text-2xl ">Trending now</h1>
       <div>
         <Marquee>
           {Array.isArray(trendingmovie) &&
@@ -94,7 +94,7 @@ function Movies({ trendingmovie, recommendedmovie, fromRecommended }) {
                     )`
                   }}>
                       <CardHeader>
-                        <CardTitle className="w-[15vw] text-xs bg-slate-300 px-2 py-1 rounded-sm">
+                        <CardTitle className=" text-xs bg-slate-300 px-2 py-1 rounded-sm">
                           {result.title}
                         </CardTitle>
                       </CardHeader>

@@ -81,11 +81,11 @@ function MovieDetails() {
 
             <div className=" text-slate-400">
               <div className="px-4 sm:py-5 md:flex md:justify-evenly">
-                <div className="py-4">
-                  <h1 className="text-4xl">GENRE</h1>
+                <div className="py-8">
+                  <h1 className="text-2xl sm:text-4xl">GENRE</h1>
                   {data.genres.map((genre) => {
                     return (
-                      <p className="text-xl my-1" key={genre.id}>
+                      <p className="sm:text-xl my-1" key={genre.id}>
                         {genre.name}
                       </p>
                     );
@@ -102,7 +102,7 @@ function MovieDetails() {
                 </div>
 
                 <div className="py-4">
-                  <div className="text-4xl">
+                  <div className="text-2xl sm:text-4xl">
                     <p>{data.title}</p>
                   </div>
                   <div className="text-xl my-1">

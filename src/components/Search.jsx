@@ -19,7 +19,7 @@ function Search() {
           if (e.key === "Enter") searchMovieFtn(e.target.value);
         }}
         onChange={(e) => dispatch(userSearchInput(e.target.value))}
-      />
+      className="w-[70vw] sm:w-[50vw]"/>
     </div>
   );
 }

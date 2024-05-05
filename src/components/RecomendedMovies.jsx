@@ -13,7 +13,7 @@ function RecomendedMovies() {
   return (
     <section className="w-full flex justify-center">
       <div className="">
-      <h2 className="text-2xl py-6">Recommended for you</h2>
+      <h2 className="text-xl py-6 sm:text-2xl">Recommended for you</h2>
         {isLoading ? (
           <Loading />
         ) : (
