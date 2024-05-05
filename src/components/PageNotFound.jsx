@@ -7,7 +7,7 @@ function PageNotFound() {
   // console.error(error);
 
   const style = {
-    backgroundImage: `url(${pageNotFound})`
+    backgroundImage: `url(${pageNotFound})`,
   };
 
   return (

@@ -14,8 +14,8 @@ function TvDetails() {
       <div
         className=" h-[100vh]"
         style={style}>
-        <div className="flex flex-col justify-center items-center gap-3 ">
-          <h1 className="sm:text-3xl text-center">
+        <div className="flex flex-col justify-center items-center gap-3 pt-[12vh]">
+          <h1 className="sm:text-3xl text-center ">
             Kindly check back tomorrow, we have an error.
           </h1>
           <CiWarning className="text-[#f43f5e] sm:text-2xl" />
