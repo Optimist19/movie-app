@@ -16,13 +16,13 @@ export const searchSlice = createSlice({
       state.searchInput = action.payload
     }
   },
-  extraReducers: (builder) => builder.addCase(searchText.pending, (state, action) =>{
+  extraReducers: (builder) => builder.addCase(searchText.pending, (state) =>{
     state.pending = "Loading"
   })
   .addCase(searchText.fulfilled, (state, action) =>{
     state.results = action.payload
   })
-  .addCase(searchText.rejected, (state, action) => {
+  .addCase(searchText.rejected, (state) => {
     state.error = "The is a problem fetching the data"
   }) 
 });
@@ -59,5 +59,3 @@ export const searchText = createAsyncThunk("musicSearch/searchText", async (stri
 export const { userSearchInput } = searchSlice.actions
 
 export default searchSlice.reducer
-
-{/* <input onchange={(e)=>dispatch(input(e.target.value))/> */}

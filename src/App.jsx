@@ -1,26 +1,28 @@
-import Home from "./pages/Home";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import PageNotFound from "./components/PageNotFound";
-import MovieDetails, {
-  loader as getMovieDetails
-} from "./components/MovieDetails";
-
-import LayOutPage from "./pages/LayOutPage";
-
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+import Home from "./pages/Home";
+import LayOutPage from "./pages/LayOutPage";
 import ErrorBoundary from "./components/ErrorBoundary";
-import TVPage from "./pages/TVPage";
 import BookMakePage from "./pages/BookMakePage";
+import MovieDetailsPage from "./pages/MovieDetailsPage";
+import TvDetailsPage from "./pages/TvDetailsPage";
+import TelevisionPage from "./pages/TelevisionPage";
+import NotFoundPage from "./pages/NotFoundPage";
+
+
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "./components/mode-toggle";
+
+import { loader as getMovieDetails } from "./components/MovieDetails";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <LayOutPage />,
-      errorElement: <PageNotFound />,
+      errorElement: <NotFoundPage />,
       children: [
         {
           index: true,
@@ -30,13 +32,18 @@ function App() {
         },
         {
           path: "movie/:id",
-          element: <MovieDetails />,
+          element: <MovieDetailsPage />,
           errorElement: <ErrorBoundary />,
           loader: getMovieDetails
         },
         {
           path: "tv",
-          element: <TVPage />,
+          element: <TelevisionPage />,
+          errorElement: <ErrorBoundary />
+        },
+        {
+          path: "tv/:id",
+          element: <TvDetailsPage />,
           errorElement: <ErrorBoundary />
         },
         {

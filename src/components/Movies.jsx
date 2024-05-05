@@ -20,7 +20,7 @@ function Movies({ trendingmovie, recommendedmovie, fromRecommended }) {
 
   const dispatch = useDispatch()
 
-  const a = useSelector(store => store.bookmark)
+  // const a = useSelector(store => store.bookmark)
 
 // console.log(a)
 

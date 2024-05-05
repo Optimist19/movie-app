@@ -1,9 +1,9 @@
 import Television from '@/components/Television'
 
-function TVPage() {
+function TelevisionPage() {
   return (
 	<div><Television /></div>
   )
 }
 
-export default TVPage
+export default TelevisionPage

@@ -91,25 +91,23 @@ function MovieDetails() {
                     );
                   })}
 
-                  <p className="my-1">{data.original_language}</p>
-                  <p className="my-1">{data.release_date}</p>
-                  <p className="my-1">{data.revenue}</p>
-                  <p className="my-1">
-                    {data.spoken_languages[0].english_name}
+                  <p className="my-1">Language: {data.original_language}</p>
+                  <p className="my-1">Release Date: {data.release_date}</p>
+                  <p className="my-1">Spoken Language:      
+                     {data.spoken_languages[0].english_name}
                   </p>
-                  <p className="my-1">{data.spoken_languages[0].name}</p>
                   <div onClick={videoTriller}><FaCirclePlay className="text-4xl cursor-pointer pt-1"/></div>
                 </div>
 
                 <div className="py-4">
                   <div className="text-2xl sm:text-4xl">
-                    <p>{data.title}</p>
+                    <p>Title: {data.title}</p>
                   </div>
                   <div className="text-xl my-1">
-                    <p>{playTime}hr(s)</p>
+                    <p>Duration: {playTime}hr(s)</p>
                   </div>
                   <div className="md:text-xl my-1 md:w-[30vw]">
-                    <p>{data.overview}</p>
+                    <p>Overview: {data.overview}</p>
                   </div>
                   <div className="flex items-center py-3">
                     {rating.map((a, i) => {

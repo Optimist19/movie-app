@@ -52,7 +52,8 @@ button{
   position: fixed;
   top: 7vh;
   right: 4vw;
-  color: rgb(244 63 94);
+  color: #f43f5e;
+  z-index: 1;
 }
 
 

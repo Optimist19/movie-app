@@ -1,6 +1,6 @@
 function BookMakes() {
   return (
-	<div>BookMakes</div>
+	<div>BookMarks</div>
   )
 }
 

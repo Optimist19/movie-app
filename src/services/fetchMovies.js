@@ -68,6 +68,22 @@ export async function movieTriller(id){
   }
 }
 
+export async function tv(){
+  try {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/trending/tv/day?language=en-US`,
+      options
+    );
+    const data = await response.json();
+    console.log(data)
+    // console.log(data.videos.results)
+    return data.results
+  } catch (err) {
+    console.error("Error fetching movies:", err);
+    return err;
+  }
+}
+
 
 
 
